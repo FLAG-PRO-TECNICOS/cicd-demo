@@ -7,6 +7,7 @@ on:
 
 permissions:
   issues: write
+  pull-requests: write
 
 jobs:
   reply:
@@ -18,7 +19,6 @@ jobs:
         with:
           script: |
             const commenter = context.payload.comment.user.login;
-
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
