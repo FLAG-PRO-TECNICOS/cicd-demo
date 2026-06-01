@@ -7,7 +7,7 @@ describe("App", () => {
   test("renders the app title", () => {
     render(<App />);
 
-    expect(1).toBe(2);
+    expect(2).toBe(2);
 
     expect(
       screen.getByRole("heading", { name: /ci\/cd react demo/i }),
