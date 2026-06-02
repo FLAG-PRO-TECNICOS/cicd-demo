@@ -30,7 +30,7 @@ jobs:
 
       - name: Example Success
         if: success()
-        run: echo "SUCCESS! PR: ${{ github.event.number }}"
+        run: echo "SUCCESS! PR: ${{ github.event.pull_request.number }}"
 
       - name: Example Failure
         if: failure()
