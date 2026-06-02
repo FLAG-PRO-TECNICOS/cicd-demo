@@ -27,3 +27,11 @@ jobs:
 
       - name: Build app
         run: npm run build
+
+      - name: Example Success
+        if: success()
+        run: echo "SUCCESS!"
+
+      - name: Example Failure
+        if: failure()
+        run: echo "FAILURE!!!!"        
