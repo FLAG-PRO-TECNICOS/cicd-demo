@@ -31,7 +31,7 @@ jobs:
       - name: Example Success
         if: success()
         env:
-          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_NUMBER: ${{ github.event.issue.number }}
         run: echo "SUCCESS! PR: $PR_NUMBER"
 
       - name: Example Failure
