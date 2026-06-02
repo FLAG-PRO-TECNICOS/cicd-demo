@@ -32,7 +32,13 @@ jobs:
         if: success()
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: echo "SUCCESS! PR $PR_NUMBER"
+        run: |
+          curl -H "Content-Type: application/json" \
+            -X POST \
+            -d "{
+              \"content\": \"🚀 URL https://deploy-preview-$PR_NUMBER--storied-horse-e06f0f.netlify.app\"
+            }" \
+            "${{ secrets.DISCORD_WEBHOOK }}"
 
       - name: Example Failure
         if: failure()
