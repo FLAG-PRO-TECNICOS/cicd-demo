@@ -6,7 +6,7 @@ function App() {
   return (
     <main className="app">
       <h1>CI/CD React Demo!!!!! 🤣😅</h1>
-      <h2>New and Improved - now with subtitles!!!!</h2>
+      <h2>New and Improved - now with subtitles!!!! YAY!!!!</h2>
 
       <p>
         This small app exists so we can run automated tests in GitHub Actions.
